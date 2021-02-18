@@ -1,9 +1,12 @@
+
+//////////////////////////Dans Analyse\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 Ajouter les attributes de Controleur Ruche dans Analyse
-    -humidité
-    -temperature
-    -masse
-    -éclairement
-    -pression
+    -humidité char
+    -temperature short
+    -masse short 
+    -éclairement short
+    -pression short
 
     -tension (demander le type)
     -intensité (demander le type)
@@ -19,5 +22,29 @@ Ajouter les attributes de batterie dans Analyse (demander les type)
 Changer en aggregation entre INA/WIRE
 
 Changer la méthode de CR:EnvoyerDonnées(); en EnvoyerDonnéesMesures();
+Et metre les parametre
+
+Changer le diagramme d'état 
+
+changer le diagramme de séquence "configurer systeme"
+
+//////////////////////////Dans conception\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+menu
+1 configuer Syteme 
+    1 nom
+    2 information systeme
+    3 retour
+2 configurer batterie
+    1 configurer capacité
+    2 retour
+3 configurer balance
+    1 tarer
+    2 etalonner
+    3 peser
+    4 retour
+changer extend du cas d'utilisation
+
+
+
 
 
