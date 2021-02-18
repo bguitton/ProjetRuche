@@ -1,0 +1,18 @@
+Ajouter les attributes de Controleur Ruche dans Analyse
+    -humidité
+    -temperature
+    -poids
+    -éclairement
+    -pression
+    -tension
+    -intensité
+    -taux de charge
+    -charge
+Ajouter les attributes de balance dans Analyse
+    -poids 
+Ajouter les attributes de batterie dans Analyse (demander les type)
+    -tension
+    -intensité
+    -tauxDeCharge
+    -charge
+Changer en aggregation entre INA/WIRE
