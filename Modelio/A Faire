@@ -1,18 +1,23 @@
 Ajouter les attributes de Controleur Ruche dans Analyse
     -humidité
     -temperature
-    -poids
+    -masse
     -éclairement
     -pression
-    -tension
-    -intensité
-    -taux de charge
-    -charge
+
+    -tension (demander le type)
+    -intensité (demander le type)
+    -taux de charge (demander le type)
+    -charge (demander le type)
 Ajouter les attributes de balance dans Analyse
-    -poids 
+    -masse 
 Ajouter les attributes de batterie dans Analyse (demander les type)
     -tension
     -intensité
     -tauxDeCharge
     -charge
 Changer en aggregation entre INA/WIRE
+
+Changer la méthode de CR:EnvoyerDonnées(); en EnvoyerDonnéesMesures();
+
+
