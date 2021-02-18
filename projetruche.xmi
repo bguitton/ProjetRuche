@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_Hh7LQFyREeuumO6b2CHQaA" name="projetruche">
+  <eAnnotations xmi:id="_Hh7LQVyREeuumO6b2CHQaA" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_Hh7LQlyREeuumO6b2CHQaA" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_Hh7LQ1yREeuumO6b2CHQaA" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Hh7yUFyREeuumO6b2CHQaA" name="Aggregateur">
+    <ownedOperation xmi:id="_Hh7yUVyREeuumO6b2CHQaA" name="ObtenirTemperatures" visibility="public"/>
+    <ownedOperation xmi:id="_Hh7yUlyREeuumO6b2CHQaA" name="ObtenirPoids" visibility="public"/>
+    <ownedOperation xmi:id="_Hh7yU1yREeuumO6b2CHQaA" name="ObtenirHumidites" visibility="public"/>
+    <ownedOperation xmi:id="_Hh7yVFyREeuumO6b2CHQaA" name="ObtenirEclairements" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Hh7yVVyREeuumO6b2CHQaA" name="BDD"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Hh7yVlyREeuumO6b2CHQaA" name="Contrôleur"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_Hh7yV1yREeuumO6b2CHQaA" name="Interaction">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_Hh7yWFyREeuumO6b2CHQaA" name="locals">
+      <ownedAttribute xmi:id="_Hh7yWVyREeuumO6b2CHQaA" name="mySQL" type="_Hh7yUFyREeuumO6b2CHQaA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_Hh7yWlyREeuumO6b2CHQaA" name="maBDD" type="_Hh7yVVyREeuumO6b2CHQaA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_Hh7yW1yREeuumO6b2CHQaA" name="r1" type="_Hh7yUFyREeuumO6b2CHQaA" aggregation="composite"/>
+      <ownedAttribute xmi:id="_Hh7yXFyREeuumO6b2CHQaA" name="r" type="_Hh7yVlyREeuumO6b2CHQaA" aggregation="composite"/>
+    </nestedClassifier>
+    <lifeline xmi:id="_Hh7yXVyREeuumO6b2CHQaA" name="mySQL" represents="_Hh7yWVyREeuumO6b2CHQaA" coveredBy="_Hh7yYFyREeuumO6b2CHQaA _Hh7yZFyREeuumO6b2CHQaA _Hh7yZVyREeuumO6b2CHQaA _Hh7yZlyREeuumO6b2CHQaA _Hh7yb1yREeuumO6b2CHQaA _Hh7ycFyREeuumO6b2CHQaA _Hh7ycVyREeuumO6b2CHQaA _Hh7yclyREeuumO6b2CHQaA _Hh7yc1yREeuumO6b2CHQaA"/>
+    <lifeline xmi:id="_Hh7yXlyREeuumO6b2CHQaA" name="maBDD" represents="_Hh7yWlyREeuumO6b2CHQaA" coveredBy="_Hh7yYFyREeuumO6b2CHQaA _Hh7yalyREeuumO6b2CHQaA _Hh7ya1yREeuumO6b2CHQaA _Hh7ybFyREeuumO6b2CHQaA"/>
+    <lifeline xmi:id="_Hh7yX1yREeuumO6b2CHQaA" name="r" represents="_Hh7yXFyREeuumO6b2CHQaA" coveredBy="_Hh7yZ1yREeuumO6b2CHQaA _Hh7yaFyREeuumO6b2CHQaA _Hh7yaVyREeuumO6b2CHQaA _Hh7ybVyREeuumO6b2CHQaA _Hh7yblyREeuumO6b2CHQaA"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_Hh7yYFyREeuumO6b2CHQaA" name="CombinedFragment" covered="_Hh7yXlyREeuumO6b2CHQaA _Hh7yXVyREeuumO6b2CHQaA">
+      <operand xmi:id="_Hh7yYVyREeuumO6b2CHQaA">
+        <guard xmi:id="_Hh7yYlyREeuumO6b2CHQaA">
+          <specification xmi:type="uml:LiteralString" xmi:id="_Hh7yY1yREeuumO6b2CHQaA" value="Executer toutes les x minutes"/>
+        </guard>
+        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_Hh7yZFyREeuumO6b2CHQaA" covered="_Hh7yXVyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Hh7yZVyREeuumO6b2CHQaA" covered="_Hh7yXVyREeuumO6b2CHQaA" start="_Hh7yZFyREeuumO6b2CHQaA" finish="_Hh7yc1yREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7yZlyREeuumO6b2CHQaA" covered="_Hh7yXVyREeuumO6b2CHQaA" message="_Hh7yd1yREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7yZ1yREeuumO6b2CHQaA" covered="_Hh7yX1yREeuumO6b2CHQaA" message="_Hh7yd1yREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Hh7yaFyREeuumO6b2CHQaA" covered="_Hh7yX1yREeuumO6b2CHQaA" start="_Hh7yZ1yREeuumO6b2CHQaA" finish="_Hh7yblyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7yaVyREeuumO6b2CHQaA" covered="_Hh7yX1yREeuumO6b2CHQaA" event="_Hh7yflyREeuumO6b2CHQaA" message="_Hh7yeFyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7yalyREeuumO6b2CHQaA" covered="_Hh7yXlyREeuumO6b2CHQaA" event="_Hh7yf1yREeuumO6b2CHQaA" message="_Hh7yeFyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Hh7ya1yREeuumO6b2CHQaA" covered="_Hh7yXlyREeuumO6b2CHQaA" start="_Hh7yalyREeuumO6b2CHQaA" finish="_Hh7ybFyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7ybFyREeuumO6b2CHQaA" covered="_Hh7yXlyREeuumO6b2CHQaA" message="_Hh7yeVyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7ybVyREeuumO6b2CHQaA" covered="_Hh7yX1yREeuumO6b2CHQaA" message="_Hh7yeVyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7yblyREeuumO6b2CHQaA" covered="_Hh7yX1yREeuumO6b2CHQaA" message="_Hh7yelyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7yb1yREeuumO6b2CHQaA" covered="_Hh7yXVyREeuumO6b2CHQaA" message="_Hh7yelyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7ycFyREeuumO6b2CHQaA" covered="_Hh7yXVyREeuumO6b2CHQaA" message="_Hh7ye1yREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7ycVyREeuumO6b2CHQaA" covered="_Hh7yXVyREeuumO6b2CHQaA" message="_Hh7yfFyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Hh7yclyREeuumO6b2CHQaA" covered="_Hh7yXVyREeuumO6b2CHQaA" message="_Hh7yfVyREeuumO6b2CHQaA"/>
+        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_Hh7yc1yREeuumO6b2CHQaA" covered="_Hh7yXVyREeuumO6b2CHQaA"/>
+      </operand>
+    </fragment>
+    <formalGate xmi:id="_Hh7ydFyREeuumO6b2CHQaA" message="_Hh7ye1yREeuumO6b2CHQaA"/>
+    <formalGate xmi:id="_Hh7ydVyREeuumO6b2CHQaA" message="_Hh7yfFyREeuumO6b2CHQaA"/>
+    <formalGate xmi:id="_Hh7ydlyREeuumO6b2CHQaA" message="_Hh7yfVyREeuumO6b2CHQaA"/>
+    <message xmi:id="_Hh7yd1yREeuumO6b2CHQaA" name="Obtenir valeur (idCAnal,NumChamp,NbValeur)" messageSort="asynchCall" receiveEvent="_Hh7yZ1yREeuumO6b2CHQaA" sendEvent="_Hh7yZlyREeuumO6b2CHQaA"/>
+    <message xmi:id="_Hh7yeFyREeuumO6b2CHQaA" name="ObtenirTemperatures" receiveEvent="_Hh7yalyREeuumO6b2CHQaA" sendEvent="_Hh7yaVyREeuumO6b2CHQaA"/>
+    <message xmi:id="_Hh7yeVyREeuumO6b2CHQaA" name="retourne requete" messageSort="reply" receiveEvent="_Hh7ybVyREeuumO6b2CHQaA" sendEvent="_Hh7ybFyREeuumO6b2CHQaA"/>
+    <message xmi:id="_Hh7yelyREeuumO6b2CHQaA" name="retourne tableau valeur" messageSort="asynchCall" receiveEvent="_Hh7yb1yREeuumO6b2CHQaA" sendEvent="_Hh7yblyREeuumO6b2CHQaA"/>
+    <message xmi:id="_Hh7ye1yREeuumO6b2CHQaA" name="CalculerMoyennes" messageSort="asynchCall" receiveEvent="_Hh7ycFyREeuumO6b2CHQaA" sendEvent="_Hh7ydFyREeuumO6b2CHQaA"/>
+    <message xmi:id="_Hh7yfFyREeuumO6b2CHQaA" name="CalculerMini" messageSort="asynchCall" receiveEvent="_Hh7ycVyREeuumO6b2CHQaA" sendEvent="_Hh7ydVyREeuumO6b2CHQaA"/>
+    <message xmi:id="_Hh7yfVyREeuumO6b2CHQaA" name="CalculerMaxi" messageSort="asynchCall" receiveEvent="_Hh7yclyREeuumO6b2CHQaA" sendEvent="_Hh7ydlyREeuumO6b2CHQaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_Hh7yflyREeuumO6b2CHQaA" operation="_Hh7yUVyREeuumO6b2CHQaA"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_Hh7yf1yREeuumO6b2CHQaA" operation="_Hh7yUVyREeuumO6b2CHQaA"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_Hh7ygFyREeuumO6b2CHQaA" name="State Machine">
+    <region xmi:id="_Hh7ygVyREeuumO6b2CHQaA">
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_Hh7yglyREeuumO6b2CHQaA" name="Initial State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_Hh7yg1yREeuumO6b2CHQaA" name="Création des tâches"/>
+      <subvertex xmi:type="uml:State" xmi:id="_Hh7yhFyREeuumO6b2CHQaA" name="Repos"/>
+      <subvertex xmi:type="uml:State" xmi:id="_Hh7yhVyREeuumO6b2CHQaA" name="TacheCalculs"/>
+      <transition xmi:id="_Hh7yhlyREeuumO6b2CHQaA" name="Mise sous tension" source="_Hh7yglyREeuumO6b2CHQaA" target="_Hh7yg1yREeuumO6b2CHQaA"/>
+      <transition xmi:id="_Hh7yh1yREeuumO6b2CHQaA" name="Transition" source="_Hh7yg1yREeuumO6b2CHQaA" target="_Hh7yhFyREeuumO6b2CHQaA"/>
+      <transition xmi:id="_Hh7yiFyREeuumO6b2CHQaA" name="Toutes les x minutes" source="_Hh7yhFyREeuumO6b2CHQaA" target="_Hh7yhVyREeuumO6b2CHQaA"/>
+      <transition xmi:id="_Hh7yiVyREeuumO6b2CHQaA" name="Transition" source="_Hh7yhVyREeuumO6b2CHQaA" target="_Hh7yhFyREeuumO6b2CHQaA"/>
+    </region>
+  </packagedElement>
+</uml:Model>

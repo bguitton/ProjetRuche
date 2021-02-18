@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_fLuMsFwFEeu1JeocNVKbGA" name="Annoter un graphique">
+  <eAnnotations xmi:id="_fLuMsVwFEeu1JeocNVKbGA" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_fLuMslwFEeu1JeocNVKbGA" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_fLuMs1wFEeu1JeocNVKbGA" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_fLuMtFwFEeu1JeocNVKbGA" name="DiagrammeAnnoterGraphique">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_fLuMtVwFEeu1JeocNVKbGA" name="locals">
+      <ownedAttribute xmi:id="_fLuMtlwFEeu1JeocNVKbGA" name="Utilisateur" aggregation="composite"/>
+      <ownedAttribute xmi:id="_fLuMt1wFEeu1JeocNVKbGA" name="laBase" aggregation="composite"/>
+      <ownedAttribute xmi:id="_fLuMuFwFEeu1JeocNVKbGA" name="unGraphique" aggregation="composite"/>
+      <ownedAttribute xmi:id="_fLuMuVwFEeu1JeocNVKbGA" name="leControleurPageGraphique" aggregation="composite"/>
+    </nestedClassifier>
+    <lifeline xmi:id="_fLuMulwFEeu1JeocNVKbGA" name="Utilisateur" represents="_fLuMtlwFEeu1JeocNVKbGA" coveredBy="_fLuMvlwFEeu1JeocNVKbGA _fLuMylwFEeu1JeocNVKbGA _fLuM0lwFEeu1JeocNVKbGA _fLuM4lwFEeu1JeocNVKbGA"/>
+    <lifeline xmi:id="_fLuMu1wFEeu1JeocNVKbGA" name="laBase" represents="_fLuMt1wFEeu1JeocNVKbGA" coveredBy="_fLuMxVwFEeu1JeocNVKbGA _fLuMxlwFEeu1JeocNVKbGA _fLuMx1wFEeu1JeocNVKbGA _fLuM2VwFEeu1JeocNVKbGA _fLuM2lwFEeu1JeocNVKbGA _fLuM3FwFEeu1JeocNVKbGA"/>
+    <lifeline xmi:id="_fLuMvFwFEeu1JeocNVKbGA" name="unGraphique" represents="_fLuMuFwFEeu1JeocNVKbGA" coveredBy="_fLuMv1wFEeu1JeocNVKbGA _fLuMwFwFEeu1JeocNVKbGA _fLuMwVwFEeu1JeocNVKbGA _fLuMyVwFEeu1JeocNVKbGA _fLuMy1wFEeu1JeocNVKbGA _fLuMzFwFEeu1JeocNVKbGA _fLuMzVwFEeu1JeocNVKbGA _fLuM01wFEeu1JeocNVKbGA _fLuM1FwFEeu1JeocNVKbGA _fLuM1VwFEeu1JeocNVKbGA _fLuM21wFEeu1JeocNVKbGA _fLuM41wFEeu1JeocNVKbGA _fLuM5FwFEeu1JeocNVKbGA _fLuM5VwFEeu1JeocNVKbGA"/>
+    <lifeline xmi:id="_fLuMvVwFEeu1JeocNVKbGA" name="leControleurPageGraphique" represents="_fLuMuVwFEeu1JeocNVKbGA" coveredBy="_fLuMwlwFEeu1JeocNVKbGA _fLuMw1wFEeu1JeocNVKbGA _fLuMxFwFEeu1JeocNVKbGA _fLuMyFwFEeu1JeocNVKbGA _fLuM1lwFEeu1JeocNVKbGA _fLuM11wFEeu1JeocNVKbGA _fLuM2FwFEeu1JeocNVKbGA _fLuM3VwFEeu1JeocNVKbGA _fLuM3lwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuMvlwFEeu1JeocNVKbGA" covered="_fLuMulwFEeu1JeocNVKbGA" message="_fLuM5lwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuMv1wFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" message="_fLuM5lwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fLuMwFwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" start="_fLuMv1wFEeu1JeocNVKbGA" finish="_fLuMyVwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuMwVwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" message="_fLuM51wFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuMwlwFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA" message="_fLuM51wFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fLuMw1wFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA" start="_fLuMwlwFEeu1JeocNVKbGA" finish="_fLuMyFwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuMxFwFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA" event="_fLuM71wFEeu1JeocNVKbGA" message="_fLuM6FwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuMxVwFEeu1JeocNVKbGA" covered="_fLuMu1wFEeu1JeocNVKbGA" event="_fLuM8FwFEeu1JeocNVKbGA" message="_fLuM6FwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fLuMxlwFEeu1JeocNVKbGA" covered="_fLuMu1wFEeu1JeocNVKbGA" start="_fLuMxVwFEeu1JeocNVKbGA" finish="_fLuMx1wFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_fLuMx1wFEeu1JeocNVKbGA" covered="_fLuMu1wFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_fLuMyFwFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_fLuMyVwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuMylwFEeu1JeocNVKbGA" covered="_fLuMulwFEeu1JeocNVKbGA" message="_fLuM6VwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuMy1wFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" message="_fLuM6VwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fLuMzFwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" start="_fLuMy1wFEeu1JeocNVKbGA" finish="_fLuMzVwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_fLuMzVwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_fLuMzlwFEeu1JeocNVKbGA" name="CombinedFragment" interactionOperator="alt">
+      <operand xmi:id="_fLuMz1wFEeu1JeocNVKbGA">
+        <guard xmi:id="_fLuM0FwFEeu1JeocNVKbGA">
+          <specification xmi:type="uml:LiteralString" xmi:id="_fLuM0VwFEeu1JeocNVKbGA" value="Entrée"/>
+        </guard>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM0lwFEeu1JeocNVKbGA" covered="_fLuMulwFEeu1JeocNVKbGA" message="_fLuM6lwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM01wFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" message="_fLuM6lwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fLuM1FwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" start="_fLuM01wFEeu1JeocNVKbGA" finish="_fLuM21wFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM1VwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" message="_fLuM61wFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM1lwFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA" message="_fLuM61wFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fLuM11wFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA" start="_fLuM1lwFEeu1JeocNVKbGA" finish="_fLuM3lwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM2FwFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA" event="_fLuM8VwFEeu1JeocNVKbGA" message="_fLuM7FwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM2VwFEeu1JeocNVKbGA" covered="_fLuMu1wFEeu1JeocNVKbGA" event="_fLuM8lwFEeu1JeocNVKbGA" message="_fLuM7FwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fLuM2lwFEeu1JeocNVKbGA" covered="_fLuMu1wFEeu1JeocNVKbGA" start="_fLuM2VwFEeu1JeocNVKbGA" finish="_fLuM3FwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_fLuM21wFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM3FwFEeu1JeocNVKbGA" covered="_fLuMu1wFEeu1JeocNVKbGA" message="_fLuM7VwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM3VwFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA" message="_fLuM7VwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_fLuM3lwFEeu1JeocNVKbGA" covered="_fLuMvVwFEeu1JeocNVKbGA"/>
+      </operand>
+      <operand xmi:id="_fLuM31wFEeu1JeocNVKbGA" name="InteractionOperand">
+        <guard xmi:id="_fLuM4FwFEeu1JeocNVKbGA">
+          <specification xmi:type="uml:LiteralString" xmi:id="_fLuM4VwFEeu1JeocNVKbGA" value="Annuler"/>
+        </guard>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM4lwFEeu1JeocNVKbGA" covered="_fLuMulwFEeu1JeocNVKbGA" message="_fLuM7lwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLuM41wFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" message="_fLuM7lwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_fLuM5FwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA" start="_fLuM41wFEeu1JeocNVKbGA" finish="_fLuM5VwFEeu1JeocNVKbGA"/>
+        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_fLuM5VwFEeu1JeocNVKbGA" covered="_fLuMvFwFEeu1JeocNVKbGA"/>
+      </operand>
+    </fragment>
+    <message xmi:id="_fLuM5lwFEeu1JeocNVKbGA" name="SELECTIONNER_POINT" messageSort="asynchCall" receiveEvent="_fLuMv1wFEeu1JeocNVKbGA" sendEvent="_fLuMvlwFEeu1JeocNVKbGA"/>
+    <message xmi:id="_fLuM51wFEeu1JeocNVKbGA" name="POINT_SELECTIONNÉ" messageSort="asynchCall" receiveEvent="_fLuMwlwFEeu1JeocNVKbGA" sendEvent="_fLuMwVwFEeu1JeocNVKbGA"/>
+    <message xmi:id="_fLuM6FwFEeu1JeocNVKbGA" name="AnnoterGraphique" receiveEvent="_fLuMxVwFEeu1JeocNVKbGA" sendEvent="_fLuMxFwFEeu1JeocNVKbGA"/>
+    <message xmi:id="_fLuM6VwFEeu1JeocNVKbGA" name="ECRIRE_ANNOTATION" messageSort="asynchCall" receiveEvent="_fLuMy1wFEeu1JeocNVKbGA" sendEvent="_fLuMylwFEeu1JeocNVKbGA"/>
+    <message xmi:id="_fLuM6lwFEeu1JeocNVKbGA" name="APPUI_ENTRÉE" messageSort="asynchCall" receiveEvent="_fLuM01wFEeu1JeocNVKbGA" sendEvent="_fLuM0lwFEeu1JeocNVKbGA"/>
+    <message xmi:id="_fLuM61wFEeu1JeocNVKbGA" name="AJOUT_ANNOTATION" messageSort="asynchCall" receiveEvent="_fLuM1lwFEeu1JeocNVKbGA" sendEvent="_fLuM1VwFEeu1JeocNVKbGA"/>
+    <message xmi:id="_fLuM7FwFEeu1JeocNVKbGA" name="AjouterAnnotation" receiveEvent="_fLuM2VwFEeu1JeocNVKbGA" sendEvent="_fLuM2FwFEeu1JeocNVKbGA"/>
+    <message xmi:id="_fLuM7VwFEeu1JeocNVKbGA" name="Le point a bien été annoté" messageSort="reply" receiveEvent="_fLuM3VwFEeu1JeocNVKbGA" sendEvent="_fLuM3FwFEeu1JeocNVKbGA"/>
+    <message xmi:id="_fLuM7lwFEeu1JeocNVKbGA" name="ANNULER" messageSort="asynchCall" receiveEvent="_fLuM41wFEeu1JeocNVKbGA" sendEvent="_fLuM4lwFEeu1JeocNVKbGA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_fLuM71wFEeu1JeocNVKbGA"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_fLuM8FwFEeu1JeocNVKbGA"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_fLuM8VwFEeu1JeocNVKbGA"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_fLuM8lwFEeu1JeocNVKbGA"/>
+</uml:Model>
