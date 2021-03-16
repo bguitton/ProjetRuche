@@ -14,20 +14,8 @@ Changer le diagramme d'état
 changer le diagramme de séquence "configurer systeme"
 
 //////////////////////////Dans conception\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-menu
-1 configuer Syteme 
-    1 nom
-    2 information systeme
-    3 retour
-2 configurer batterie
-    1 configurer capacité
-    2 retour
-3 configurer balance
-    1 tarer
-    2 etalonner
-    3 peser
-    4 retour
-changer extend du cas d'utilisation
+
+
 Ajouter les attributes de controleur Ruche dans conception : char type
 
 
