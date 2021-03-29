@@ -125,4 +125,6 @@ build.lolin32-1.0.4/main.ino.cpp.o: main.ino.cpp \
  /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/cores/esp32/IPAddress.h \
  /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/cores/esp32/HardwareSerial.h \
  /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/cores/esp32/Esp.h \
- /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/variants/lolin32/pins_arduino.h
+ /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/variants/lolin32/pins_arduino.h \
+ /opt/Esp8266-Arduino-Makefile/libraries/HX711/src/HX711.h \
+ /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/tools/sdk/include/soc/soc/rtc.h
