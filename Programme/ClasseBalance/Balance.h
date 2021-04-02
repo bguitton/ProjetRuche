@@ -24,12 +24,15 @@ public:
     virtual ~Balance();
     void TarerLaBalance();
     float EtalonnerLaBalance();
+    float ObtenirScale();
+    float ObtenirOffset();
     float Peser();
+    bool TarageEffectuer();
   
 private:
 
     HX711 *leHX711;
-
+    bool tarage;
     float masse;
     float offset;
     float scale;

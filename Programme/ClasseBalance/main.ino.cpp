@@ -40,6 +40,7 @@ void setup() {
 void loop() {
 
     int reponse = 0;
+
     Serial.println("1 - pour Tarer ");
     Serial.println("2 - pour Etalonner ");
     Serial.println("3 - pour Peser ");
@@ -58,10 +59,14 @@ void loop() {
                 Serial.println("tarage effectuer: \t\t");
                 break;
             case '2':
-                Serial.println("Poser 5 kg et appuyer sur une touche pour etalonner ");
-                while (!Serial.available());
-                while (Serial.available()) Serial.read();
-                laBalance.EtalonnerLaBalance();
+                if (laBalance.TarageEffectuer()) {
+                    Serial.println("Poser 5 kg et appuyer sur une touche pour etalonner ");
+                    while (!Serial.available());
+                    while (Serial.available()) Serial.read();
+                    laBalance.EtalonnerLaBalance();
+                } else {
+                    Serial.println("Vous devez tarer la balance avant de faire un etalonnage ");
+                }
                 break;
             case '3':
                 Serial.print("masse = ");

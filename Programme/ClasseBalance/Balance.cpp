@@ -15,12 +15,13 @@
 #define TAILLEMAX 11
 
 Balance::Balance(int dout, int sck, int gain) {
-    
+    tarage=false;
     
     leHX711=new HX711();
     
    
     leHX711->begin(dout, sck, gain);
+    
     
     
 }
@@ -63,6 +64,8 @@ void Balance::TarerLaBalance() {
     
    
     leHX711->tare();
+    tarage=true;
+    scale=leHX711->get_scale();
     
     
 }
@@ -73,7 +76,10 @@ float Balance::EtalonnerLaBalance() {
     float scale = (leHX711->read_average(10) - leHX711->get_offset() )/ 5000;
     
     leHX711->set_scale(scale);
-    
+    offset=leHX711->get_offset();
     return leHX711->get_offset();
 }
 
+bool Balance::TarageEffectuer(){
+    return tarage;
+}

@@ -16,19 +16,23 @@
 #include "Environnement.h"
 
 #define SERIAL_BAUD 115200
-Environnement unEnvironnement;
+
+Environnement *unEnvironnement;
 
 void setup() {
 
     Serial.begin(SERIAL_BAUD);
-
+    
     Wire.begin();
     Serial.println("Fonction setup");
+    unEnvironnement = new Environnement(false,BME280I2C::I2CAddr_0x77);
 }
+
+
 
 void loop() {
     mesure lesMesures;
-    lesMesures = unEnvironnement.ObtenirMesures();
+    lesMesures = unEnvironnement->ObtenirMesures();
 
     Serial.print("Temp: ");
     Serial.print(lesMesures.temperature);

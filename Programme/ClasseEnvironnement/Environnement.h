@@ -28,13 +28,14 @@ struct mesure {
 
 class Environnement {
 public:
-    Environnement();
-    Environnement(const Environnement& orig);
+    Environnement(bool _debug=false,BME280I2C::I2CAddr adresse=BME280I2C::I2CAddr_0x77);
+//    Environnement(const Environnement& orig);
     virtual ~Environnement();
     mesure ObtenirMesures();
 
 
 private:
+    bool debug;
 protected:
     BH1750 *leBh1750;
     BME280 *leBme280;
