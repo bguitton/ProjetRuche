@@ -16,16 +16,18 @@
 #include "HX711.h"
 #include<Arduino.h>
 #include <soc/rtc.h>
-
+#include <EEPROM.h>
 class Balance {
 public:
     Balance(int dout = 26, int sck = 25, int gain = 64);
     Balance(const Balance& orig);
     virtual ~Balance();
     void TarerLaBalance();
-    float EtalonnerLaBalance();
+    float EtalonnerLaBalance(float poidEtalon);
     float ObtenirScale();
     float ObtenirOffset();
+    void ConfiguerOffset(float _offset);
+    void ConfiguerScale(float _scale);
     float Peser();
     bool TarageEffectuer();
   
@@ -38,7 +40,7 @@ private:
     float scale;
     int dout;
     int sck;
-    int gain;
+
 
 };
 
