@@ -24,8 +24,6 @@ using namespace std;
 
 const int LOADCELL_DOUT_PIN = 26;
 const int LOADCELL_SCK_PIN = 25;
-RTC_DATA_ATTR float offset;
-RTC_DATA_ATTR float scale;
 /*
  * 
  */
@@ -61,7 +59,7 @@ void loop() {
     reponse = Serial.read();
     // Serial.println(reponse);
     switch (reponse) {
-        case '1':
+        case '1': // l'utilisateur à choisi l'option Tarer
             Serial.println("vider le plateau et appuyer sur une touche pour tarer ");
             while (!Serial.available());
             while (Serial.available()) Serial.read();
@@ -71,7 +69,7 @@ void loop() {
             EEPROM.writeDouble(0, laBalance.ObtenirOffset());
             EEPROM.commit();
             break;
-        case '2':
+        case '2': // l'utilisateur à choisi l'option Tarer
             if (laBalance.TarageEffectuer()) {
                 Serial.println("Donnez un poids étalon en gramme (ex:400g= 400) et appuyez sur entrer ");
                 while (!Serial.available());
