@@ -71,14 +71,14 @@ void loop() {
             break;
         case '2': // l'utilisateur à choisi l'option Tarer
             if (laBalance.TarageEffectuer()) {
-                Serial.println("Donnez un poids étalon en gramme (ex:400g= 400) et appuyez sur entrer ");
+                Serial.println(" Poser le poids étalon puis donnez sa valeur en gramme (ex:400g= 400) et appuyez sur entrer ");
                 while (!Serial.available());
 
                 while (Serial.available() == 0) {
                 }
                 poidEtalon = Serial.parseFloat();
 
-                Serial.println("Posez le poids choisi et  appuyez sur entrer ");
+             //   Serial.println("Posez le poids choisi et  appuyez sur entrer ");
                 while (!Serial.available());
                 while (Serial.available()) Serial.read();
                 Serial.println(poidEtalon); // affiche 4 si l'ont tape 4
