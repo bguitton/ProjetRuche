@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/b9dd8f7c/Balance.o \
 	${OBJECTDIR}/_ext/329de6a5/ControleurRuche.o \
 	${OBJECTDIR}/_ext/cab35baa/Environnement.o \
+	${OBJECTDIR}/Menu.o \
 	${OBJECTDIR}/main.ino.o
 
 
@@ -79,6 +80,11 @@ ${OBJECTDIR}/_ext/cab35baa/Environnement.o: /home/USERS/ELEVES/SNIR2019/bguitton
 	${MKDIR} -p ${OBJECTDIR}/_ext/cab35baa
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/cab35baa/Environnement.o /home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp
+
+${OBJECTDIR}/Menu.o: Menu.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Menu.o Menu.cpp
 
 ${OBJECTDIR}/main.ino.o: main.ino.cpp
 	${MKDIR} -p ${OBJECTDIR}

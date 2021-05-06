@@ -136,4 +136,5 @@ build.lolin32-1.0.4/main.ino.cpp.o: main.ino.cpp \
  /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/tools/sdk/include/freertos/freertos/queue.h \
  /opt/Esp8266-Arduino-Makefile/libraries/BME280/src/BME280I2C.h \
  /opt/Esp8266-Arduino-Makefile/libraries/BME280/src/BME280.h \
- /opt/Esp8266-Arduino-Makefile/libraries/BH1750/src/BH1750.h constante.h
+ /opt/Esp8266-Arduino-Makefile/libraries/BH1750/src/BH1750.h constante.h \
+ Menu.h

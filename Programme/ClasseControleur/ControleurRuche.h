@@ -16,6 +16,7 @@
 #include "Balance.h"
 #include "Environnement.h"
 #include "constante.h"
+
 struct mesure {
     float temperature;
     float humidite;
@@ -29,6 +30,25 @@ public:
     ControleurRuche();
     ControleurRuche(const ControleurRuche& orig);
     virtual ~ControleurRuche();
+    
+    void EnvoyerDonneesMesures();
+    void EnvoyerDonneesBatterie();
+    void RecupererDonnees();
+    void RecupererDonneesBatterie();
+    void AfficherConfig();
+    void ConfiguerNom();
+    void CommandeSaisie();
+    void Retour();
+    void ConfiguerBatterie();
+    void ConfigurerBalance(); 
+    void GestionMenu();
+    void GestionMenuSysteme();
+    void GestionMenuBatterie();
+    void GestionMenuBalance(int _reponse);
+    void Retour();
+    
+ 
+    
 private:
     mesure lesMesuresC;
     float masse;
@@ -38,29 +58,6 @@ private:
     float charge;
     Balance *laBalance;
     Environnement *unEnvironnement;
-    
-    
-    
-    void EnvoyerDonneesMesures();//float _humidite,float _pression,float _temperature,float _masse,float _eclairement
-    void EnvoyerDonneesBatterie();
-    void RecupererDonnees();
-    void RecupererDonneesBatterie();
-    void AfficherConfig();
-    void ConfiguerNom();
-    void CommandeSaisie();
-    void Retour();
-    void ConfiguerBatterie();
-    void ConfigurerBalance();
-    void AfficherMenu();
-    void AfficherMenuBatterie();
-    void AfficherMenuBalance();
-    void AfficherMenuSysteme();
-    void GestionMenu();
-    void GestionMenuSysteme();
-    void GestionMenuBatterie();
-    void GestionMenuBalance(int reponse);
-    void Retour();
-    
 
 };
 

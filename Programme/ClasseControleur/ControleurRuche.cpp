@@ -15,14 +15,14 @@
 
 ControleurRuche::ControleurRuche() {
     unEnvironnement = new Environnement();
-    laBalance=new Balance();
-    
-    
-    
+    laBalance = new Balance();
 
-  laBalance->ConfiguerOffset(EEPROM.readDouble(0)); // lire le coef offset à l'adresse 0 et configuration de offset
-  laBalance->ConfiguerScale(EEPROM.readDouble(10));// lire le coef scale à l'adresse 10 et configuration de scale
-    
+
+
+
+    laBalance->ConfiguerOffset(EEPROM.readDouble(0)); // lire le coef offset à l'adresse 0 et configuration de offset
+    laBalance->ConfiguerScale(EEPROM.readDouble(10)); // lire le coef scale à l'adresse 10 et configuration de scale
+
 }
 
 ControleurRuche::ControleurRuche(const ControleurRuche& orig) {
@@ -31,18 +31,18 @@ ControleurRuche::ControleurRuche(const ControleurRuche& orig) {
 ControleurRuche::~ControleurRuche() {
 }
 
-void ControleurRuche::EnvoyerDonneesMesures(){
-    
+void ControleurRuche::EnvoyerDonneesMesures() {
+
 }
 
-void ControleurRuche::EnvoyerDonneesBatterie(){
-    
+void ControleurRuche::EnvoyerDonneesBatterie() {
+
 }
 
-void ControleurRuche::RecupererDonnees(){
-     
+void ControleurRuche::RecupererDonnees() {
+
     lesMesuresC = unEnvironnement->ObtenirMesures();
-    masse=laBalance->Peser();
+    masse = laBalance->Peser();
     Serial.print("Temp: ");
     Serial.print(lesMesuresC.temperature);
     Serial.print("°C\t");
@@ -55,72 +55,61 @@ void ControleurRuche::RecupererDonnees(){
     Serial.print("eclairement: ");
     Serial.print(lesMesuresC.eclairement);
     Serial.println("lux\t");
-    
-    
-    
-}
 
 
-void ControleurRuche::RecupererDonneesBatterie(){
-    
+
 }
 
-void ControleurRuche::AfficherConfig(){
-    
+void ControleurRuche::RecupererDonneesBatterie() {
+
 }
 
-void ControleurRuche::ConfiguerNom(){
-    
-}
-void ControleurRuche::CommandeSaisie(){
-    
+void ControleurRuche::AfficherConfig() {
+
 }
 
-void ControleurRuche::Retour(){
-    
-}
-void ControleurRuche::ConfiguerBatterie(){
-    
-}
-void ControleurRuche::ConfigurerBalance(){
-    
-}
-void ControleurRuche::AfficherMenu(){
-    
+void ControleurRuche::ConfiguerNom() {
+
 }
 
+void ControleurRuche::CommandeSaisie() {
 
-void ControleurRuche::AfficherMenuBatterie(){
-    
-}
-void ControleurRuche::AfficherMenuBalance(){
-    
-}
-void ControleurRuche::AfficherMenuSysteme(){
-    
-}
-void ControleurRuche::GestionMenu(){
-    
 }
 
-void ControleurRuche::GestionMenuSysteme(){
-    
+void ControleurRuche::Retour() {
+
 }
 
-void ControleurRuche::GestionMenuBatterie(){
-    
+void ControleurRuche::ConfiguerBatterie() {
+
 }
 
-void ControleurRuche::GestionMenuBalance(int reponse){
-     switch (reponse) {
+void ControleurRuche::ConfigurerBalance() {
+
+}
+
+void ControleurRuche::GestionMenu() {
+
+}
+
+void ControleurRuche::GestionMenuSysteme() {
+
+}
+
+void ControleurRuche::GestionMenuBatterie() {
+
+}
+
+void ControleurRuche::GestionMenuBalance(int _reponse) {
+    switch (_reponse) {
         case '1': // l'utilisateur à choisi l'option Tarer
             Serial.println("vider le plateau et appuyer sur une touche pour tarer ");
             while (!Serial.available());
             while (Serial.available()) Serial.read();
             laBalance.TarerLaBalance();
-           // Serial.println(laBalance.ObtenirOffset()); affichage de coef offset
+            // Serial.println(laBalance.ObtenirOffset()); affichage de coef offset
             Serial.println("tarage effectuer: \t\t");
-            EEPROM.writeDouble(0, laBalance.ObtenirOffset());// sauvegarder le coef offset à l'adresse 0
+            EEPROM.writeDouble(0, laBalance.ObtenirOffset()); // sauvegarder le coef offset à l'adresse 0
             EEPROM.commit();
             Serial.print("masse = ");
             Serial.println(laBalance.Peser());
@@ -135,12 +124,12 @@ void ControleurRuche::GestionMenuBalance(int reponse){
                 poidEtalon = Serial.parseFloat();
 
 
-               while (!Serial.available());
-               while (Serial.available()) Serial.read();
+                while (!Serial.available());
+                while (Serial.available()) Serial.read();
                 Serial.println(poidEtalon); // affiche 4 si l'ont tape 4
                 laBalance.EtalonnerLaBalance(poidEtalon);
                 Serial.println(laBalance.ObtenirScale());
-                EEPROM.writeDouble(10, laBalance.ObtenirScale());// sauvegarder le coef scale à l'adresse 10
+                EEPROM.writeDouble(10, laBalance.ObtenirScale()); // sauvegarder le coef scale à l'adresse 10
                 EEPROM.commit();
             } else {
                 Serial.println("Vous devez tarer la balance avant de faire un etalonnage ");
@@ -148,8 +137,8 @@ void ControleurRuche::GestionMenuBalance(int reponse){
             break;
         case '3':
             Serial.print("masse = ");
-            Serial.println(laBalance.Peser());// appel de la fonction peser qui renvoi la masse mesurée
-            
+            Serial.println(laBalance.Peser()); // appel de la fonction peser qui renvoi la masse mesurée
+
             break;
         case '4':
             Serial.print(" offset: ");

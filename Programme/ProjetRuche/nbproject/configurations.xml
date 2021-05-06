@@ -7,6 +7,7 @@
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.h</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur/ControleurRuche.h</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.h</itemPath>
+      <itemPath>Menu.h</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/constante.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -19,6 +20,7 @@
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.cpp</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur/ControleurRuche.cpp</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp</itemPath>
+      <itemPath>Menu.cpp</itemPath>
       <itemPath>main.ino.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -83,6 +85,10 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Menu.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.ino.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -140,6 +146,10 @@
             ex="false"
             tool="3"
             flavor2="0">
+      </item>
+      <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Menu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.ino.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -17,6 +17,7 @@
 #include <string.h>
 #include <valarray>
 #include "ControleurRuche.h"
+#include "Menu.h"
 
 
 
@@ -28,6 +29,7 @@ using namespace std;
  */
 
 ControleurRuche leControleur;
+Menu leMenu;
 
 void setup() {
 
@@ -39,7 +41,8 @@ void setup() {
 }
 
 void loop() {
-    leControleur.RecupererDonnees();
+    leMenu.AfficherMenuBalance();
+    
   
     
     delay(500);
