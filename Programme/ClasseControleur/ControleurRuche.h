@@ -13,6 +13,16 @@
 
 #ifndef CONTROLEURRUCHE_H
 #define CONTROLEURRUCHE_H
+#include "Balance.h"
+#include "Environnement.h"
+#include "constante.h"
+struct mesure {
+    float temperature;
+    float humidite;
+    float pression;
+    float eclairement;
+};
+
 
 class ControleurRuche {
 public:
@@ -20,14 +30,15 @@ public:
     ControleurRuche(const ControleurRuche& orig);
     virtual ~ControleurRuche();
 private:
-    float temperature;
-    float pression;
-    float eclairement;
+    mesure lesMesuresC;
     float masse;
     float tension;
     float intensite;
     float tauxDeCharge;
     float charge;
+    Balance *laBalance;
+    Environnement *unEnvironnement;
+    
     
     
     void EnvoyerDonneesMesures();//float _humidite,float _pression,float _temperature,float _masse,float _eclairement
@@ -47,7 +58,7 @@ private:
     void GestionMenu();
     void GestionMenuSysteme();
     void GestionMenuBatterie();
-    void GestionMenuBalance();
+    void GestionMenuBalance(int reponse);
     void Retour();
     
 

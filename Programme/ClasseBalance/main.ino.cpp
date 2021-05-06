@@ -34,12 +34,12 @@ void setup() {
 
     EEPROM.begin(EEPROM_SIZE);
     Serial.begin(115200);
-    Serial.print(" offset: ");
+    Serial.print(" offset: ");// coef du tarage
     Serial.println(EEPROM.readDouble(0));
-    laBalance.ConfiguerOffset(EEPROM.readDouble(0));
-    Serial.print(" scale: ");
+    laBalance.ConfiguerOffset(EEPROM.readDouble(0)); // lire le coef offset à l'adresse 0 et configuration de offset
+    Serial.print(" scale: ");// coef de l'étalonnage
     Serial.println(EEPROM.readDouble(10));
-    laBalance.ConfiguerScale(EEPROM.readDouble(10));
+    laBalance.ConfiguerScale(EEPROM.readDouble(10));// lire le coef scale à l'adresse 10 et configuration de scale
     while (!Serial.available());
     while (Serial.available()) Serial.read();
 
@@ -53,6 +53,7 @@ void loop() {
     Serial.println("1 - pour Tarer ");
     Serial.println("2 - pour Etalonner ");
     Serial.println("3 - pour Peser ");
+   // Serial.println("4 - pour Afficher les informations ");
     while (!Serial.available());
 
 
@@ -64,27 +65,29 @@ void loop() {
             while (!Serial.available());
             while (Serial.available()) Serial.read();
             laBalance.TarerLaBalance();
-            Serial.println(laBalance.ObtenirOffset());
+           // Serial.println(laBalance.ObtenirOffset()); affichage de coef offset
             Serial.println("tarage effectuer: \t\t");
-            EEPROM.writeDouble(0, laBalance.ObtenirOffset());
+            EEPROM.writeDouble(0, laBalance.ObtenirOffset());// sauvegarder le coef offset à l'adresse 0
             EEPROM.commit();
+            Serial.print("masse = ");
+            Serial.println(laBalance.Peser());
             break;
         case '2': // l'utilisateur à choisi l'option Tarer
             if (laBalance.TarageEffectuer()) {
-                Serial.println(" Poser le poids étalon puis donnez sa valeur en gramme (ex:400g= 400) et appuyez sur entrer ");
+                Serial.println("Poser le poids étalon puis donnez sa valeur en gramme (ex:400g= 400) et appuyez sur entrer ");
                 while (!Serial.available());
 
                 while (Serial.available() == 0) {
                 }
                 poidEtalon = Serial.parseFloat();
 
-             //   Serial.println("Posez le poids choisi et  appuyez sur entrer ");
-                while (!Serial.available());
-                while (Serial.available()) Serial.read();
+
+               while (!Serial.available());
+               while (Serial.available()) Serial.read();
                 Serial.println(poidEtalon); // affiche 4 si l'ont tape 4
                 laBalance.EtalonnerLaBalance(poidEtalon);
                 Serial.println(laBalance.ObtenirScale());
-                EEPROM.writeDouble(10, laBalance.ObtenirScale());
+                EEPROM.writeDouble(10, laBalance.ObtenirScale());// sauvegarder le coef scale à l'adresse 10
                 EEPROM.commit();
             } else {
                 Serial.println("Vous devez tarer la balance avant de faire un etalonnage ");
@@ -92,7 +95,7 @@ void loop() {
             break;
         case '3':
             Serial.print("masse = ");
-            Serial.println(laBalance.Peser());
+            Serial.println(laBalance.Peser());// appel de la fonction peser qui renvoi la masse mesurée
             
             break;
         case '4':

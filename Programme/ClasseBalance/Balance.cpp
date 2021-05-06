@@ -1,19 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   Balance.cpp
- * Author: bguitton
+/**
+ *
+ *
+ * @File:   Balance.cpp
+ * @Author: bguitton
  * 
- * Created on 22 mars 2021, 09:20
+ * @date Created on 22 mars 2021, 09:20
  */
 
 #include "Balance.h"
 #define TAILLEMAX 11
-
+/**
+ * 
+ * @param dout
+ * @param sck
+ * @param gain
+ */
 Balance::Balance(int dout, int sck, int gain) {
     tarage = false;
 
@@ -53,9 +54,6 @@ float Balance::Peser() {
     }
 
     return tab[5] / 1000;
-
-
-
 }
 
 void Balance::TarerLaBalance() {
@@ -64,10 +62,7 @@ void Balance::TarerLaBalance() {
     leHX711->tare();
     tarage = true;
     offset = leHX711->get_offset();
-    
-
-
-}
+    }
 
 float Balance::EtalonnerLaBalance(float poidEtalon) {
 
