@@ -2,9 +2,9 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ /
 
-/* 
+/ 
  * File:   ControleurRuche.h
  * Author: bguitton
  *
@@ -16,13 +16,15 @@
 #include "Balance.h"
 #include "Environnement.h"
 #include "constante.h"
+//#include "Menu.h"
 
-struct mesure {
-    float temperature;
-    float humidite;
-    float pression;
-    float eclairement;
-};
+
+//struct mesure{
+//    float temperature;
+//    float humidite;
+//    float pression;
+//    float eclairement;
+//};
 
 
 class ControleurRuche {
@@ -30,7 +32,7 @@ public:
     ControleurRuche();
     ControleurRuche(const ControleurRuche& orig);
     virtual ~ControleurRuche();
-    
+
     void EnvoyerDonneesMesures();
     void EnvoyerDonneesBatterie();
     void RecupererDonnees();
@@ -41,14 +43,14 @@ public:
     void Retour();
     void ConfiguerBatterie();
     void ConfigurerBalance(); 
-    void GestionMenu();
-    void GestionMenuSysteme();
-    void GestionMenuBatterie();
-    void GestionMenuBalance(int _reponse);
-    void Retour();
-    
+    void GestionMenu(int _choix);
+    void GestionMenuSysteme(int _choix);
+    void GestionMenuBatterie(int _choix);
+    void GestionMenuBalance(int _choix);
+
+    // Menu *leMenu;
  
-    
+
 private:
     mesure lesMesuresC;
     float masse;
@@ -60,6 +62,3 @@ private:
     Environnement *unEnvironnement;
 
 };
-
-#endif /* CONTROLEURRUCHE_H */
-

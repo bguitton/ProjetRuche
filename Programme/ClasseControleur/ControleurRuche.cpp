@@ -16,7 +16,7 @@
 ControleurRuche::ControleurRuche() {
     unEnvironnement = new Environnement();
     laBalance = new Balance();
-
+    leMenu=new Menu();
 
 
 
@@ -88,20 +88,38 @@ void ControleurRuche::ConfigurerBalance() {
 
 }
 
-void ControleurRuche::GestionMenu() {
+void ControleurRuche::GestionMenu(int _choix) {
+switch (_choix) {
+        case '1': 
+            
+            break;
+        case '2': 
+           
+            break;
+        case '3':
+          
+            break;
+        case '4':
+            Serial.print(" offset: ");
+            Serial.println(laBalance.ObtenirOffset());
+            Serial.print(" sclae: ");
+            Serial.println(laBalance.ObtenirScale());
+            break;
+        default:
+            Serial.println("Veuiller saisir un chiffre entre 1 et 3  ");
+            break;
+}
+
+void ControleurRuche::GestionMenuSysteme(int _choix) {
 
 }
 
-void ControleurRuche::GestionMenuSysteme() {
+void ControleurRuche::GestionMenuBatterie(int _choix) {
 
 }
 
-void ControleurRuche::GestionMenuBatterie() {
-
-}
-
-void ControleurRuche::GestionMenuBalance(int _reponse) {
-    switch (_reponse) {
+void ControleurRuche::GestionMenuBalance(int _choix) {
+    switch (_choix) {
         case '1': // l'utilisateur à choisi l'option Tarer
             Serial.println("vider le plateau et appuyer sur une touche pour tarer ");
             while (!Serial.available());
@@ -151,7 +169,6 @@ void ControleurRuche::GestionMenuBalance(int _reponse) {
             break;
     }
 }
-
 
 
 

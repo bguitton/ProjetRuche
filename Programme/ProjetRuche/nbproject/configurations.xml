@@ -5,7 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.h</itemPath>
-      <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur/ControleurRuche.h</itemPath>
+      <itemPath>ControleurRuche.h</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.h</itemPath>
       <itemPath>Menu.h</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/constante.h</itemPath>
@@ -18,7 +18,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.cpp</itemPath>
-      <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur/ControleurRuche.cpp</itemPath>
+      <itemPath>ControleurRuche.cpp</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp</itemPath>
       <itemPath>Menu.cpp</itemPath>
       <itemPath>main.ino.cpp</itemPath>
@@ -65,16 +65,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur/ControleurRuche.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur/ControleurRuche.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp"
             ex="false"
             tool="1"
@@ -84,6 +74,10 @@
             ex="false"
             tool="3"
             flavor2="0">
+      </item>
+      <item path="ControleurRuche.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ControleurRuche.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -127,16 +121,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur/ControleurRuche.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur/ControleurRuche.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp"
             ex="false"
             tool="1"
@@ -146,6 +130,10 @@
             ex="false"
             tool="3"
             flavor2="0">
+      </item>
+      <item path="ControleurRuche.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ControleurRuche.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
       </item>

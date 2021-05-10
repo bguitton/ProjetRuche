@@ -19,6 +19,7 @@
 #include<BME280I2C.h>
 #include <BH1750.h>
 
+
 struct mesure {
     float temperature;
     float humidite;
@@ -36,10 +37,9 @@ public:
 
 private:
     bool debug;
-protected:
     BH1750 *leBh1750;
     BME280 *leBme280;
-
+   
     mesure lesMesures;
 
 

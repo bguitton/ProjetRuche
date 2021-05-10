@@ -17,6 +17,11 @@
 #define LOADCELL_DOUT_PIN = 26;
 #define LOADCELL_SCK_PIN = 25;
 #define SERIAL_BAUD 115200
-
+struct mesure{
+    float temperature;
+    float humidite;
+    float pression;
+    float eclairement;
+};
 #endif /* CONSTANTE_H */
 

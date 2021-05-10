@@ -2,9 +2,9 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ /
 
-/* 
+/ 
  * File:   ControleurRuche.h
  * Author: bguitton
  *
@@ -16,26 +16,19 @@
 #include "Balance.h"
 #include "Environnement.h"
 #include "constante.h"
+#include "Menu.h"
+
+
+
+
+
 class ControleurRuche {
 public:
     ControleurRuche();
     ControleurRuche(const ControleurRuche& orig);
     virtual ~ControleurRuche();
-private:
-    float temperature;
-    float pression;
-    float eclairement;
-    float masse;
-    float tension;
-    float intensite;
-    float tauxDeCharge;
-    float charge;
-    Balance *laBalance;
-    Environnement *unEnvironement;
-    
-public:   
-    
-    void EnvoyerDonneesMesures();//float _humidite,float _pression,float _temperature,float _masse,float _eclairement
+
+    void EnvoyerDonneesMesures();
     void EnvoyerDonneesBatterie();
     void RecupererDonnees();
     void RecupererDonneesBatterie();
@@ -44,19 +37,25 @@ public:
     void CommandeSaisie();
     void Retour();
     void ConfiguerBatterie();
-    void ConfigurerBalance();
-    void AfficherMenu();
-    void AfficherMenuBatterie();
-    void AfficherMenuBalance();
-    void AfficherMenuSysteme();
-    void GestionMenu();
+
+    void GestionMenu(int _choix);
     void GestionMenuSysteme();
     void GestionMenuBatterie();
     void GestionMenuBalance();
 
-    
+     Menu *leMenu;
+ 
+
+private:
+    mesure lesMesuresC;
+    float masse;
+    float tension;
+    float intensite;
+    float tauxDeCharge;
+    float charge;
+    Balance *laBalance;
+    Environnement *unEnvironnement;
 
 };
 
 #endif /* CONTROLEURRUCHE_H */
-

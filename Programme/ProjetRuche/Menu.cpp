@@ -23,23 +23,36 @@ Menu::~Menu() {
 }
 
 void Menu::AfficherMenu() {
-
+    Serial.println("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n");
+    Serial.println("\n Faites votre choix :");
+    Serial.println("\n 1- Configurer la Batterie");
+    Serial.println("\n 2- Configurer la Balance");
+    Serial.println("\n 3- Configurer le menu système\n");
 }
 
 void Menu::AfficherMenuBatterie() {
 
+    Serial.println("\n \n \n");
+    Serial.println("\n Menu Batterie, que souhaitez-vous faire ? \n");
+    Serial.println("\n 1- Configurer la capacité de la Batterie \n");
+    Serial.println("\n 2- Retourner en arrière\n");
+
 }
 
 void Menu::AfficherMenuBalance() {
-    
-    Serial.println("1 - pour Tarer ");
 
-    Serial.println("2 - pour Etalonner ");
+    Serial.println(" Menu Balance, que souhaitez-vous faire ?");
+    Serial.println("\n 1- Tarer la balance ");
+    Serial.println("\n 2- Etalonner la balance ");
+    Serial.println("\n 3- Peser ");
+    Serial.println("\n 4- Retourner en arrière\n");
 
-    Serial.println("3 - pour Peser ");
 
 }
 
 void Menu::AfficherMenuSysteme() {
-
+    Serial.println("\n \n \n Menu Système, que souhaitez-vous faire ?");
+    Serial.println("\n 1- Configurer le nom ");
+    Serial.println("\n 2- Afficher la configuration ");
+    Serial.println("\n 3- Retourner en arrière\n");
 }

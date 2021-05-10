@@ -17,7 +17,7 @@
 #include <string.h>
 #include <valarray>
 #include "ControleurRuche.h"
-#include "Menu.h"
+
 
 
 
@@ -29,23 +29,30 @@ using namespace std;
  */
 
 ControleurRuche leControleur;
-Menu leMenu;
+//Menu leMenu;
 
 void setup() {
 
     Serial.begin(SERIAL_BAUD);
     Wire.begin();
+    EEPROM.begin(EEPROM_SIZE);
+    
     while (!Serial.available());
     while (Serial.available()) Serial.read();
-    
+
 }
 
 void loop() {
-    leMenu.AfficherMenuBalance();
-    
-  
-    
-    delay(500);
-}
+     float choix = 0;
+    leControleur.leMenu->AfficherMenu();
 
+    while (Serial.available() == 0) {
+    }
+    choix = Serial.read();
+    Serial.println(choix);
+    leControleur.GestionMenu(choix);
+
+
+    delay(1000);
+}
 
