@@ -30,6 +30,7 @@ public:
 
     void EnvoyerDonneesMesures();
     void EnvoyerDonneesBatterie();
+    void Ordonnancer();
     void RecupererDonnees();
     void RecupererDonneesBatterie();
     void AfficherConfig();
@@ -42,7 +43,6 @@ public:
     void GestionMenuSysteme();
     void GestionMenuBatterie();
     void GestionMenuBalance();
-
      Menu *leMenu;
  
 

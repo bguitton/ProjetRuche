@@ -28,7 +28,7 @@ using namespace std;
  * 
  */
 
-ControleurRuche leControleur;
+ControleurRuche *leControleur;
 //Menu leMenu;
 
 void setup() {
@@ -39,18 +39,19 @@ void setup() {
     
     while (!Serial.available());
     while (Serial.available()) Serial.read();
-
+    leControleur =new ControleurRuche();
 }
 
 void loop() {
+    leControleur->RecupererDonnees();
      float choix = 0;
-    leControleur.leMenu->AfficherMenu();
+    leControleur->leMenu->AfficherMenu();
 
     while (Serial.available() == 0) {
     }
     choix = Serial.read();
     Serial.println(choix);
-    leControleur.GestionMenu(choix);
+    leControleur->GestionMenu(choix);
 
 
     delay(1000);

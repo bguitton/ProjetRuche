@@ -23,5 +23,14 @@ struct mesure{
     float pression;
     float eclairement;
 };
+struct trameMesure{
+    short temperature;
+    char humidite;
+    unsigned short masse;
+    unsigned short eclairement;
+    unsigned short pression;
+    short pointDeRosee;
+    char typeTrame=1;
+};
 #endif /* CONSTANTE_H */
 

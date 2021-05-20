@@ -14,11 +14,15 @@
 #include "ControleurRuche.h"
 
 ControleurRuche::ControleurRuche() {
+
     
-    unEnvironnement = new Environnement();
+    lesMesuresC.temperature = 0;
+    lesMesuresC.humidite = 0;
+    lesMesuresC.pression = 0;
+    lesMesuresC.eclairement = 0;
+    unEnvironnement = new Environnement(false, BME280I2C::I2CAddr_0x77);
     laBalance = new Balance();
     leMenu = new Menu();
-
 
 
     //laBalance->ConfiguerOffset(EEPROM.readDouble(0)); // lire le coef offset à l'adresse 0 et configuration de offset
@@ -56,6 +60,8 @@ void ControleurRuche::RecupererDonnees() {
     Serial.print("eclairement: ");
     Serial.print(lesMesuresC.eclairement);
     Serial.println("lux\t");
+    Serial.print(masse);
+    Serial.println("kg\t");
 
 
 
