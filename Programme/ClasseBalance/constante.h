@@ -22,10 +22,11 @@ struct mesure{
     float humidite;
     float pression;
     float eclairement;
+
 };
 struct trameMesure{
     short temperature;
-    char humidite;
+    unsigned char humidite;
     unsigned short masse;
     unsigned short eclairement;
     unsigned short pression;
