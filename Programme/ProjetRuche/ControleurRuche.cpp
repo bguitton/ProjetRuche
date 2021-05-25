@@ -69,7 +69,7 @@ void ControleurRuche::RecupererDonnees() {
 }
 
 void ControleurRuche::RecupererDonneesBatterie() {
- Serial.println("Donnes batterie");
+ Serial.println("Donnees batterie");
 }
 
 void ControleurRuche::Ordonnancer(){
