@@ -17,6 +17,10 @@
 #define LOADCELL_DOUT_PIN = 26;
 #define LOADCELL_SCK_PIN = 25;
 #define SERIAL_BAUD 115200
+
+#define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
+#define TIME_TO_SLEEP  10        /* Time ESP32 will go to sleep (in seconds) */
+
 struct mesure{
     float temperature;
     float humidite;

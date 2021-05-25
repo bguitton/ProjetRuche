@@ -27,7 +27,8 @@ void Menu::AfficherMenu() {
     Serial.println("\n Faites votre choix :");
     Serial.println("\n 1- Configurer la Batterie");
     Serial.println("\n 2- Configurer la Balance");
-    Serial.println("\n 3- Configurer le menu système\n");
+    Serial.println("\n 3- Configurer le menu système");
+    Serial.println("\n 4- Quitter le mode configuration\n");
 }
 
 void Menu::AfficherMenuBatterie() {

@@ -53,6 +53,7 @@ private:
     float intensite;
     float tauxDeCharge;
     float charge;
+    bool choixTrame;
     Balance *laBalance;
     Environnement *unEnvironnement;
 

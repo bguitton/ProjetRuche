@@ -18,10 +18,11 @@ void setup() {
    lesMesures.humidite=36;
    lesMesures.eclairement=44898;
    lesMesures.pression=10132;
+   float masse=0.40;
 
   
     
-    
+   leModem->ForgerTrameMesure(lesMesures,masse);
     
     
 }

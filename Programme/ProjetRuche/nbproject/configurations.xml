@@ -17,10 +17,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.cpp</itemPath>
       <itemPath>ControleurRuche.cpp</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp</itemPath>
       <itemPath>Menu.cpp</itemPath>
+      <itemPath>balance.cpp</itemPath>
       <itemPath>main.ino.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -50,11 +50,6 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
       <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.h"
             ex="false"
             tool="3"
@@ -82,6 +77,8 @@
       <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="balance.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.ino.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -106,11 +103,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
       <item path="/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.h"
             ex="false"
             tool="3"
@@ -138,6 +130,8 @@
       <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="balance.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.ino.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -23,10 +23,11 @@ ControleurRuche::ControleurRuche() {
     unEnvironnement = new Environnement(false, BME280I2C::I2CAddr_0x77);
     laBalance = new Balance();
     leMenu = new Menu();
+    choixTrame=true;
 
 
-    //laBalance->ConfiguerOffset(EEPROM.readDouble(0)); // lire le coef offset à l'adresse 0 et configuration de offset
-   // laBalance->ConfiguerScale(EEPROM.readDouble(10)); // lire le coef scale à l'adresse 10 et configuration de scale
+    laBalance->ConfiguerOffset(EEPROM.readDouble(0)); // lire le coef offset à l'adresse 0 et configuration de offset
+    laBalance->ConfiguerScale(EEPROM.readDouble(10)); // lire le coef scale à l'adresse 10 et configuration de scale
 
 }
 
@@ -68,11 +69,18 @@ void ControleurRuche::RecupererDonnees() {
 }
 
 void ControleurRuche::RecupererDonneesBatterie() {
-
+ Serial.println("Donnes batterie");
 }
 
-void ControleurRuche::AfficherConfig() {
-
+void ControleurRuche::Ordonnancer(){
+    if(choixTrame==true){
+        RecupererDonnees();
+        choixTrame=false;
+        
+    }else{
+        RecupererDonneesBatterie();
+        choixTrame=true;
+    }
 }
 
 void ControleurRuche::ConfiguerNom() {
@@ -101,10 +109,12 @@ void ControleurRuche::ConfiguerBatterie() {
 
 
 void ControleurRuche::GestionMenu(int _choix) {
-    String reponse;
+
+
     switch (_choix) {
         case '1':
             leMenu->AfficherMenuBatterie();
+            GestionMenuBatterie();
 
             break;
         case '2':
@@ -112,15 +122,11 @@ void ControleurRuche::GestionMenu(int _choix) {
             GestionMenuBalance();
             break;
         case '3':
+            leMenu->AfficherMenuSysteme();
+            GestionMenuSysteme();
 
-            break;
-        case '4':
-           //quitter le mode de configuration
-            break;
-        default:
-            Serial.println("Veuiller saisir un chiffre entre 1 et 3  ");
-            break;
     }
+
 }
 
 void ControleurRuche::GestionMenuSysteme() {
@@ -152,10 +158,12 @@ void ControleurRuche::GestionMenuBatterie() {
 void ControleurRuche::GestionMenuBalance() {
     float poidEtalon;
     int choix;
-    while (!Serial.available());
-    choix = Serial.read();
+    
     laBalance->ConfiguerOffset(EEPROM.readDouble(0)); // lire le coef offset à l'adresse 0 et configuration de offset
     laBalance->ConfiguerScale(EEPROM.readDouble(10));
+    do{
+        while (!Serial.available());
+    choix = Serial.read();
     switch (choix) {
         case '1': // l'utilisateur à choisi l'option Tarer
             Serial.println("vider le plateau et appuyer sur une touche pour tarer ");
@@ -193,17 +201,13 @@ void ControleurRuche::GestionMenuBalance() {
         case '3':
             Serial.print("masse = ");
             Serial.println(laBalance->Peser()); // appel de la fonction peser qui renvoi la masse mesurée
-
-            break;
-        case '4':
-            Retour();
-            break;
-        default:
-            Serial.println("Veuiller saisir un chiffre entre 1 et 3  ");
-            break;
+           
+            
     }
     leMenu->AfficherMenuBalance();
-    GestionMenuBalance();
+    }while(choix!='4');
+    leMenu->AfficherMenu();
+
 }
 
 
