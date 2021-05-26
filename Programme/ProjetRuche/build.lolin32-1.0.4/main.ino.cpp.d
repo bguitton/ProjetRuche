@@ -137,4 +137,10 @@ build.lolin32-1.0.4/main.ino.cpp.o: main.ino.cpp \
  /opt/Esp8266-Arduino-Makefile/libraries/BME280/src/BME280I2C.h \
  /opt/Esp8266-Arduino-Makefile/libraries/BME280/src/BME280.h \
  /opt/Esp8266-Arduino-Makefile/libraries/BH1750/src/BH1750.h constante.h \
- Menu.h
+ Menu.h Batterie.h \
+ /opt/Esp8266-Arduino-Makefile/libraries/INA219/Adafruit_INA219.h \
+ /opt/Esp8266-Arduino-Makefile/libraries/INA219/Adafruit_BusIO_Register.h \
+ /opt/Esp8266-Arduino-Makefile/libraries/INA219/Adafruit_I2CDevice.h \
+ /opt/Esp8266-Arduino-Makefile/libraries/INA219/Adafruit_SPIDevice.h \
+ /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/libraries/SPI/src/SPI.h \
+ /opt/Esp8266-Arduino-Makefile/esp32-1.0.4/cores/esp32/esp32-hal-spi.h

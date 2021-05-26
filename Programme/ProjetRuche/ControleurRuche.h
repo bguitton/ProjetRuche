@@ -17,6 +17,7 @@
 #include "Environnement.h"
 #include "constante.h"
 #include "Menu.h"
+#include "Batterie.h"
 
 
 
@@ -56,7 +57,11 @@ private:
     bool choixTrame;
     Balance *laBalance;
     Environnement *unEnvironnement;
+    Batterie *laBatterie;
+    mesureBatterie lesMesuresBatterie;
 
 };
+
+
 
 #endif /* CONTROLEURRUCHE_H */

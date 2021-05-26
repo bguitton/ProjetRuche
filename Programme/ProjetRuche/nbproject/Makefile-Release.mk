@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/cab35baa/Environnement.o \
+	${OBJECTDIR}/Batterie.o \
 	${OBJECTDIR}/ControleurRuche.o \
 	${OBJECTDIR}/Menu.o \
 	${OBJECTDIR}/balance.o \
@@ -70,6 +71,11 @@ ${OBJECTDIR}/_ext/cab35baa/Environnement.o: /home/USERS/ELEVES/SNIR2019/bguitton
 	${MKDIR} -p ${OBJECTDIR}/_ext/cab35baa
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/cab35baa/Environnement.o /home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp
+
+${OBJECTDIR}/Batterie.o: Batterie.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Batterie.o Batterie.cpp
 
 ${OBJECTDIR}/ControleurRuche.o: ControleurRuche.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/Balance.h</itemPath>
+      <itemPath>Batterie.h</itemPath>
       <itemPath>ControleurRuche.h</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.h</itemPath>
       <itemPath>Menu.h</itemPath>
@@ -17,6 +18,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Batterie.cpp</itemPath>
       <itemPath>ControleurRuche.cpp</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp</itemPath>
       <itemPath>Menu.cpp</itemPath>
@@ -70,6 +72,10 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="Batterie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Batterie.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ControleurRuche.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ControleurRuche.h" ex="false" tool="3" flavor2="0">
@@ -122,6 +128,10 @@
             ex="false"
             tool="3"
             flavor2="0">
+      </item>
+      <item path="Batterie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Batterie.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ControleurRuche.cpp" ex="false" tool="1" flavor2="0">
       </item>

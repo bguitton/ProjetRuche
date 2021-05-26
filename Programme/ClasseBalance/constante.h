@@ -37,5 +37,8 @@ struct trameMesure{
     short pointDeRosee;
     char typeTrame=1;
 };
+
+
+
 #endif /* CONSTANTE_H */
 
