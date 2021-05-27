@@ -13,22 +13,23 @@
 
 #include "ModemSigfox.h"
 
-ModemSigfox::ModemSigfox():Sigfox(26,27,true){
+ModemSigfox::ModemSigfox():Sigfox(27,26,true){
     
 }
 
 void ModemSigfox::ForgerTrameMesure(mesure lesMesures,float masse){
      
    
-   laTrameMesure.temperature=short(lesMesures.temperature*100);
-   laTrameMesure.humidite=lesMesures.humidite;
-   laTrameMesure.masse=masse;
-   laTrameMesure.pression=lesMesures.pression;
-   laTrameMesure.eclairement=lesMesures.eclairement; 
+   laTrameMesure.temperature = (short)(lesMesures.temperature*100);
+   laTrameMesure.humidite = (char)lesMesures.humidite;
+   laTrameMesure.masse = (short)(masse*100);
+   laTrameMesure.pression=(short)lesMesures.pression;
+   laTrameMesure.eclairement=(short)lesMesures.eclairement; 
+   laTrameMesure.pointDeRosee=2234;
    laTrameMesure.typeTrame=1;
    
-   bool statusSig=envoyer(&laTrameMesure,sizeof(laTrameMesure));
-   
+    bool StatusSig=envoyer((void*)&laTrameMesure,sizeof(laTrameMesure));
+    Serial.println("Envoi effectuer");
    
    
 }

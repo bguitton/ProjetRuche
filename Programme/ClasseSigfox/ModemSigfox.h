@@ -16,12 +16,12 @@
 #include "sigfox.h"
 
 struct trameMesure{
-    short temperature;
-    char humidite;
     unsigned short masse;
-    unsigned short eclairement;
+    short temperature;
     unsigned short pression;
+    unsigned short eclairement;
     short pointDeRosee;
+    unsigned char humidite;
     char typeTrame=1;
 };
 

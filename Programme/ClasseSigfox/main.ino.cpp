@@ -9,17 +9,18 @@ ModemSigfox *leModem;
 
 void setup() {
     Serial.begin(SERIAL_BAUD);
-    leModem=new ModemSigfox();
+    leModem = new ModemSigfox();
     leModem->begin();
+    
     mesure lesMesures;
     
     
-    lesMesures.temperature=35.46;
-   lesMesures.humidite=36;
-   lesMesures.eclairement=44898;
-   lesMesures.pression=10132;
-   float masse=0.40;
-
+    lesMesures.temperature=35.79;
+   lesMesures.humidite=46;
+   lesMesures.eclairement=7944;
+   lesMesures.pression=10142;
+   float masse=44.13;
+   Serial.println("Setup");
   
     
    leModem->ForgerTrameMesure(lesMesures,masse);
