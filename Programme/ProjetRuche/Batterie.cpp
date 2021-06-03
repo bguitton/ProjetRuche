@@ -10,6 +10,7 @@
  */
 
 #include "Batterie.h"
+#include "constante.h"
 
 /**
  * @brief Batterie::Batterie
@@ -58,7 +59,7 @@ int Batterie::DonnerCapacite() {
  * @return Structure regroupant toutes les données
  */
 mesureBatterie Batterie::CalculerCaracteristiques() {
-
+    lesMesuresB.tensionBatterie=ina219->getBusVoltage_V();
     lesMesuresB.intensiteBatterie = ina219->getCurrent_mA();
     lesMesuresB.puissanceBatterie = ina219->getPower_mW();
 

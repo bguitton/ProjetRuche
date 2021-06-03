@@ -8,15 +8,10 @@
  */
 
 #include <Adafruit_INA219.h>
-
+#include "constante.h"
 #ifndef BATTERIE_H
 #define BATTERIE_H
-struct mesureBatterie {
-    float puissanceBatterie;
-    int tauxDeChargeBatterie;
-    float chargeBatterie;
-    float intensiteBatterie;
-};
+
 /** Structure regroupant les caractéristiques de la batterie*/
 
 

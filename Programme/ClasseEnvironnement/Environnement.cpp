@@ -55,7 +55,7 @@ mesure Environnement::ObtenirMesures() {
 
 
 
-    leBme280->read(pres, temp, hum, BME280::TempUnit_Celsius, BME280::PresUnit_Pa);
+    leBme280->read(pres, temp, hum, BME280::TempUnit_Celsius, BME280::PresUnit_hPa);
 
     lesMesures.temperature = temp;
     lesMesures.humidite = hum;

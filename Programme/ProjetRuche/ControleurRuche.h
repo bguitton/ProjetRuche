@@ -18,6 +18,7 @@
 #include "constante.h"
 #include "Menu.h"
 #include "Batterie.h"
+#include "ModemSigfox.h"
 
 
 
@@ -49,6 +50,7 @@ public:
 
 private:
     mesure lesMesuresC;
+    mesureBatterie lesMesuresBatterie;
     float masse;
     float tension;
     float intensite;
@@ -58,7 +60,8 @@ private:
     Balance *laBalance;
     Environnement *unEnvironnement;
     Batterie *laBatterie;
-    mesureBatterie lesMesuresBatterie;
+    ModemSigfox leModemSigfox;
+    
 
 };
 

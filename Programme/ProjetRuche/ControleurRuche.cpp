@@ -24,6 +24,8 @@ ControleurRuche::ControleurRuche() {
     laBalance = new Balance();
     laBatterie = new Batterie();
     leMenu = new Menu();
+    leModemSigfox = new ModemSigfox();
+    leModemSigfox->begin();
     choixTrame = true;
 
 
@@ -57,8 +59,8 @@ void ControleurRuche::RecupererDonnees() {
     Serial.print(lesMesuresC.humidite);
     Serial.print("% RH\t");
     Serial.print("Pressure: ");
-    Serial.print(lesMesuresC.pression);
-    Serial.print("Pa\t");
+    Serial.print(lesMesuresC.pression / 100);
+    Serial.print("hPa\t");
     Serial.print("eclairement: ");
     Serial.print(lesMesuresC.eclairement);
     Serial.println("lux\t");
@@ -70,28 +72,31 @@ void ControleurRuche::RecupererDonnees() {
 }
 
 void ControleurRuche::RecupererDonneesBatterie() {
-    lesMesuresBatterie=laBatterie->CalculerCaracteristiques();
-    
+    lesMesuresBatterie = laBatterie->CalculerCaracteristiques();
+    Serial.print("Tension:       ");
+    Serial.print(lesMesuresBatterie.tensionBatterie);
+    Serial.println(" V");
     Serial.print("Courant:       ");
-        Serial.print(lesMesuresBatterie.intensiteBatterie);
-        Serial.println(" mA");
-        Serial.print("Puissance:     ");
-        Serial.print(lesMesuresBatterie.puissanceBatterie);
-        Serial.println(" mW");
-        Serial.print("Charge:        ");
-        Serial.print(lesMesuresBatterie.chargeBatterie);
-        Serial.println(" Ah");
-        Serial.print("Taux de Charge:  ");
-        Serial.print(lesMesuresBatterie.tauxDeChargeBatterie);
-        Serial.println("%");
-        Serial.println("");
-        delay(1000);
+    Serial.print(lesMesuresBatterie.intensiteBatterie);
+    Serial.println(" mA");
+    Serial.print("Puissance:     ");
+    Serial.print(lesMesuresBatterie.puissanceBatterie);
+    Serial.println(" mW");
+    Serial.print("Charge:        ");
+    Serial.print(lesMesuresBatterie.chargeBatterie);
+    Serial.println(" Ah");
+    Serial.print("Taux de Charge:  ");
+    Serial.print(lesMesuresBatterie.tauxDeChargeBatterie);
+    Serial.println("%");
+    Serial.println("");
     
+    delay(1000);
+
 }
 
 void ControleurRuche::Ordonnancer() {
     if (choixTrame == true) {
-       // RecupererDonnees();
+        //RecupererDonnees();
         choixTrame = false;
 
     } else {
@@ -169,35 +174,35 @@ void ControleurRuche::GestionMenuSysteme() {
 void ControleurRuche::GestionMenuBatterie() {
     int choix;
     int capacite;
-    do{
     do {
-        while (!Serial.available());
-        choix = Serial.read();
-    } while (choix < '1' || choix > '3');
-    switch (choix) {
-        case '1':
-            Serial.println("\n \n");
-            Serial.print(" La capacité est de : ");
-            Serial.print(laBatterie->DonnerCapacite());
-            Serial.println("\n \n");
-            Serial.print(" Entrez la nouvelle capacité : ");
-            do {
-                while (!Serial.available());
-                capacite = Serial.read();
-                capacite = capacite - '0';
-                laBatterie->ConfigurerCapacite(capacite);
-                Serial.print(capacite);
-            } while (capacite < 1 || capacite > 9);
-            leMenu->AfficherMenuBatterie();
-            break;
+        do {
+            while (!Serial.available());
+            choix = Serial.read();
+        } while (choix < '1' || choix > '3');
+        switch (choix) {
+            case '1':
+                Serial.println("\n \n");
+                Serial.print(" La capacité est de : ");
+                Serial.print(laBatterie->DonnerCapacite());
+                Serial.println("\n \n");
+                Serial.print(" Entrez la nouvelle capacité : ");
+                do {
+                    while (!Serial.available());
+                    capacite = Serial.read();
+                    capacite = capacite - '0';
+                    laBatterie->ConfigurerCapacite(capacite);
+                    Serial.print(capacite);
+                } while (capacite < 1 || capacite > 9);
+                leMenu->AfficherMenuBatterie();
+                break;
 
-        case '3':
-            Serial.println("\n \n");
-            Serial.print(" La capacité est de : ");
-            Serial.println(laBatterie->DonnerCapacite());
+            case '3':
+                Serial.println("\n \n");
+                Serial.print(" La capacité est de : ");
+                Serial.println(laBatterie->DonnerCapacite());
 
-    }
-    }while(choix != '2');
+        }
+    } while (choix != '2');
     leMenu->AfficherMenu();
 }
 

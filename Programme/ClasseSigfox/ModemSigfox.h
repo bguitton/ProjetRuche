@@ -15,14 +15,23 @@
 #define MODEMSIGFOX_H
 #include "sigfox.h"
 
-struct trameMesure{
+struct trameMesure {
     unsigned short masse;
     short temperature;
     unsigned short pression;
     unsigned short eclairement;
     short pointDeRosee;
     unsigned char humidite;
-    char typeTrame=1;
+    char typeTrame = 1;
+};
+
+struct mesureBatterie {
+    float tensionBatterie;
+    float puissanceBatterie;
+    int tauxDeChargeBatterie;
+    float chargeBatterie;
+    float intensiteBatterie;
+    
 };
 
 struct mesure {
@@ -32,19 +41,28 @@ struct mesure {
     float eclairement;
 };
 
+struct trameBatterie {
+    short tension;
+    short courant;
+    short puissance;
+    short charge;
+    short nu;
+    unsigned char tauxDeCharge;
+    char typeTrame = 02;
+};
 
-class ModemSigfox : public Sigfox
-{
-    
+class ModemSigfox : public Sigfox {
 public:
-    
+
     ModemSigfox();
-    void ForgerTrameMesure(mesure lesMesures,float masse);
-     virtual ~ModemSigfox();
-   // trameBatterie ForgerTrameBatterie();
-    
+    void ForgerTrameMesure(mesure lesMesures, float masse);
+    void ForgerTrameBatterie(mesureBatterie lesMesuresBatterie);
+    virtual ~ModemSigfox();
+    // trameBatterie ForgerTrameBatterie();
+
 private:
     trameMesure laTrameMesure;
+    trameBatterie laTrameBatterie;
 
 };
 

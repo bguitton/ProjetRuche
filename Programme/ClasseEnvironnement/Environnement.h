@@ -18,14 +18,15 @@
 #include<Wire.h>
 #include<BME280I2C.h>
 #include <BH1750.h>
+#include "constante.h"
 
 
-struct mesure {
-    float temperature;
-    float humidite;
-    float pression;
-    float eclairement;
-};
+//struct mesure {
+//    float temperature;
+//    float humidite;
+//    float pression;
+//    float eclairement;
+//};
 
 
 class Environnement {

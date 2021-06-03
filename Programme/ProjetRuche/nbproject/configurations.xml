@@ -9,6 +9,8 @@
       <itemPath>ControleurRuche.h</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.h</itemPath>
       <itemPath>Menu.h</itemPath>
+      <itemPath>ModemSigfox.h</itemPath>
+      <itemPath>Sigfox.h</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance/constante.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -22,6 +24,8 @@
       <itemPath>ControleurRuche.cpp</itemPath>
       <itemPath>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement/Environnement.cpp</itemPath>
       <itemPath>Menu.cpp</itemPath>
+      <itemPath>ModemSigfox.cpp</itemPath>
+      <itemPath>Sigfox.cpp</itemPath>
       <itemPath>balance.cpp</itemPath>
       <itemPath>main.ino.cpp</itemPath>
     </logicalFolder>
@@ -41,6 +45,7 @@
     <Elem>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseBalance</Elem>
     <Elem>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseEnvironnement</Elem>
     <Elem>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseControleur</Elem>
+    <Elem>/home/USERS/ELEVES/SNIR2019/bguitton/Bureau/ProjetRuche/Programme/ClasseSigfox</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -83,6 +88,14 @@
       <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ModemSigfox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ModemSigfox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sigfox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sigfox.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="balance.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -140,6 +153,14 @@
       <item path="Menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ModemSigfox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ModemSigfox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sigfox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sigfox.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="balance.cpp" ex="false" tool="1" flavor2="0">
       </item>

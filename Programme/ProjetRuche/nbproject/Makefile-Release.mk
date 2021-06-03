@@ -39,6 +39,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Batterie.o \
 	${OBJECTDIR}/ControleurRuche.o \
 	${OBJECTDIR}/Menu.o \
+	${OBJECTDIR}/ModemSigfox.o \
+	${OBJECTDIR}/Sigfox.o \
 	${OBJECTDIR}/balance.o \
 	${OBJECTDIR}/main.ino.o
 
@@ -86,6 +88,16 @@ ${OBJECTDIR}/Menu.o: Menu.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Menu.o Menu.cpp
+
+${OBJECTDIR}/ModemSigfox.o: ModemSigfox.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ModemSigfox.o ModemSigfox.cpp
+
+${OBJECTDIR}/Sigfox.o: Sigfox.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sigfox.o Sigfox.cpp
 
 ${OBJECTDIR}/balance.o: balance.cpp
 	${MKDIR} -p ${OBJECTDIR}
